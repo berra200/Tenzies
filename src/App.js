@@ -67,18 +67,19 @@ function App() {
 
 
   return (
-    <main className="py-20 h-screen bg-[#0B2434]">
+    <main className="px-4 py-20 h-screen bg-[#0B2434]">
       {tenzies && <Confetti />}
-      <div className="bg-[#F5F5F5] mx-auto w-[600px] h-[600px] rounded-[10px] flex flex-col items-center text-center">
-        <h1 className="text-4xl font-bold mt-16">Tenzies</h1>
+      <div className="bg-[#F5F5F5] mx-auto max-w-[600px] rounded-[10px] flex flex-col items-center text-center p-2">
+        <h1 className="text-4xl font-bold mt-8">Tenzies</h1>
         <p className="text-lg mt-4 w-72">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
-        <div className="grid grid-cols-5 gap-6 mt-10">
+        <div className="grid grid-cols-5 gap-4 mt-10">
           {diceElements}
         </div>
         <button 
-          className="bg-indigo-600 active:shadow-[inset_5px_5px_10px_-3px_rgba(0,0,0,0.7)] text-white font-bold py-4 px-16 rounded-lg m-16 text-3xl"
+          className="bg-indigo-600 active:shadow-[inset_5px_5px_10px_-3px_rgba(0,0,0,0.7)] text-white font-bold py-4 px-16 rounded-lg mt-16 mb-6 text-3xl"
           onClick={tenzies? newGame : rollDice}
         >{tenzies? "New Game" : "Roll"}</button>
+      <p className="text-black">Copyright 2022</p>
       </div>
     </main>
   );
