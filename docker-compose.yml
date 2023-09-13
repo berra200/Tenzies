@@ -8,9 +8,11 @@ services:
     restart: unless-stopped
     # ports:
     #   - "3014:3000"
+
+
     labels:
       traefik.enable: true
       traefik.http.routers.tenzies.entrypoint: web
       traefik.http.routers.tenzies.rule: Host( 'tenzies.birgell.se' )
     network:
-      - traefiktest_default
+      - traefik-reverse-proxy_default
