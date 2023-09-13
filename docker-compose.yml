@@ -19,5 +19,4 @@ services:
 
 networks:
   traefik-reverse-proxy_default:
-    web:
-      external: true
+    external: true
