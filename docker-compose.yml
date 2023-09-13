@@ -12,7 +12,7 @@ services:
 
     labels:
       traefik.enable: true
-      traefik.http.routers.tenzies.entrypoints: http
+      traefik.http.routers.tenzies.entrypoints: websecure
       traefik.http.routers.tenzies.rule: Host( "tenzies.birgell.se" )
     networks:
       - traefik-reverse-proxy_default
