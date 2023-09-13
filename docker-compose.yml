@@ -6,8 +6,8 @@ services:
     # image: martinbirgell/tenzies:1.0.0
     build: .
     restart: unless-stopped
-    ports:
-      - "3014:3000"
+    # ports:
+    #   - "3014:3000"
     labels:
       traefik.enable: true
       traefik.http.routers.tenzies.entrypoint: web
