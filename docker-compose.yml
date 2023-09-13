@@ -14,5 +14,7 @@ services:
       traefik.enable: true
       traefik.http.routers.tenzies.entrypoint: web
       traefik.http.routers.tenzies.rule: Host( 'tenzies.birgell.se' )
-    network:
+    networks:
       - traefik-reverse-proxy_default
+
+# network
