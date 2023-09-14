@@ -1,24 +1,8 @@
 version: '3'
 
 services:
-  app:
-    container_name: "tenzies"
-    # image: martinbirgell/tenzies:1.0.0
+  tenzies:
     build: .
     restart: unless-stopped
-    # ports:
-    #   - "3014:3000"
-
-
-    labels:
-      traefik.enable: true
-      traefik.http.routers.tenzies.entrypoints: https
-      traefik.http.routers.tenzies.rule: Host( "tenzies.birgell.se" )
-      traefik.http.routers.tenzies.tls: true
-      traefik.http.routers.tenzies.certresolver: production
-    networks:
-      - traefik-reverse-proxy_default
-
-networks:
-  traefik-reverse-proxy_default:
-    external: true
+    ports:
+      - "3014:3000"
